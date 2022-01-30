@@ -1,0 +1,40 @@
+.splash {
+  height: 100vh;
+  background-image: linear-gradient(0deg, rgba(19,19,19,1) 0%, rgba(19,19,19,1) 6%, rgba(19,19,19,0.9) 25%, rgba(19,19,19,0) 70%), url('../../media/images/background.jpg');
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+
+  .main-title {
+    position: absolute;
+    top: 51%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      margin: 0;
+      margin-right: -.75em;
+      font-size: 11em;
+      letter-spacing: .75em;
+      font-weight: $font-black;
+    }
+
+    h2 {
+      margin: 30px 0 0 0;
+      font-size: 2em;
+      letter-spacing: .5em;
+      margin-right: -.5em;
+      font-weight: $font-black;
+
+      span {
+        padding-bottom: 1em;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

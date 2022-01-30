@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 100px 0;
+
+  .main-nav {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      letter-spacing: $font-spacing;
+      font-size: 1.8em;
+      color: $color-three;
+      transition: color 0.5s;
+
+      &.active {
+        color: $color-two;
+      }
+    }
+
+    a:hover {
+      color: $color-two;
+    }
+  }
+}
+
+footer {
+  padding: 20px 0;
+  font-size: 20px;
+  text-align: center;
+  font-weight: $font-regular;
+  letter-spacing: $font-spacing;
+}

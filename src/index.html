@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Music</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div class="splash">
+      <div class="main-title">
+        <h1 class="page-title">TASTE</h1>
+        <h2 class="page-subtitle"><span>ENGAGE</span><span>IN</span><span>ART</span></h2>
+      </div>
+    </div>
+
+    <nav>
+      <div class="main-nav">
+        <a href="#home">HOME</a>
+        <a href="#search">SEARCH</a>
+        <a href="#discover">DISCOVER</a>
+      </div>
+    </nav>
+
+    <div id="pages">
+      <section id="home">
+        <div class="home-wrapper container"></div>
+      </section>
+      <section id="search">
+        <div class="search-wrapper container"></div>
+      </section>
+      <section id="discover">
+        <div class="discover-wrapper container"></div>
+      </section>
+    </div>
+
+    <footer>
+      <p>All rights reserved</p>
+    </footer>
+
+
+    <script id="template-home" type="text/x-handlebars-template">
+      <div class="subscribe">
+        <div class="subscribe-background">
+          <img src="media/images/subscribe.jpg">
+        </div>
+        <h1 class="subscribe-title">SUBSCRIBE <span>NOW</span></h1>
+        <a href="subscribe-button">JOIN NOW</a>
+        <div class="artist">
+          <div class="artist-data">
+            <p class="artist-name">
+              <span class="line">
+                Dean
+              </span>
+              <span class="line second-line">
+                Hen<span class="coloured-part">son</span>
+              </span>
+            </p>
+            <div class="artist-image">
+              <img src="media/images/artist.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="subscribe-offer">
+          <h3>NEW ALBUM</h3>
+          <p>Available only for subscribers</p>
+        </div>
+      </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>
