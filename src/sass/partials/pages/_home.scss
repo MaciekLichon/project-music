@@ -58,12 +58,12 @@
         right: 18%;
         width: 450px;
         height: 600px;
+      }
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+      .artist-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
       .artist-name {
@@ -75,18 +75,18 @@
         font-size: 100px;
         letter-spacing: $font-spacing;
         font-weight: $font-black;
+      }
 
-        .line {
-          display: block;
-        }
+      .artist-name .line {
+        display: block;
+      }
 
-        .second-line {
-          margin-left: 80px;
+      .artist-name .second-line {
+        margin-left: 80px;
+      }
 
-          span {
-            color: $color-one;
-          }
-        }
+      .second-line span {
+        color: $color-one;
       }
     }
   }
