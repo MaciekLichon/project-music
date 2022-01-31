@@ -1,5 +1,7 @@
-import {select, classNames} from './settings.js';
+import {select, classNames, settings} from './settings.js';
 import Home from './components/Home.js';
+import Song from './components/Song.js';
+import Discover from './components/Discover.js';
 
 const app = {
   initHome: function() {
@@ -68,9 +70,72 @@ const app = {
     }
   },
 
+  initData: function() {
+    const thisApp = this;
+
+    thisApp.data = {};
+
+    const url = settings.db.url + '/' + settings.db.songs;
+
+    fetch(url)
+      .then(function(rawResponse) {
+        return rawResponse.json();
+      })
+      .then(function(parsedResponse) {
+        thisApp.data.songs = parsedResponse;
+
+        thisApp.initHomeSongs();
+        thisApp.initDiscover();
+        thisApp.initAudioPlayer();
+      });
+  },
+
+  initHomeSongs: function() {
+    const thisApp = this;
+
+    const homeAudioWrapper = document.querySelector(select.containerOf.homeAudio);
+
+    for (let songData in thisApp.data.songs) {
+      new Song(thisApp.data.songs[songData], homeAudioWrapper);
+    }
+  },
+
+  initAudioPlayer: function() {
+    /* drugie rozwiazanie pozwala na wprowadzanie dodatkowych opcji np. zatrzymanie przy odtworzeniu innego */
+
+    // const thisApp = this;
+    //
+    // thisApp.audioPlayers = document.querySelectorAll(select.containerOf.audioPlayer);
+    //
+    // for (let audioPlayer of thisApp.audioPlayers) {
+    //   // eslint-disable-next-line no-undef
+    //   new GreenAudioPlayer(audioPlayer);
+    // }
+
+    // eslint-disable-next-line no-undef
+    GreenAudioPlayer.init({
+      selector: select.containerOf.audioPlayer, // inits Green Audio Player on each audio container that has class "player"
+      stopOthersOnPlay: true
+    });
+  },
+
+  initDiscover: function() {
+    const thisApp = this;
+
+    const discoverAudioWrapper = document.querySelector(select.containerOf.discoverAudio);
+
+    // random song selector
+    let dataLength = Object.keys(thisApp.data.songs).length;
+    let randomIndex = Math.floor(Math.random() * dataLength);
+    let randomSong = thisApp.data.songs[Object.keys(thisApp.data.songs)[randomIndex]];
+
+    new Discover(randomSong, discoverAudioWrapper);
+  },
+
   init: function() {
     const thisApp = this;
 
+    thisApp.initData();
     thisApp.initHome();
     thisApp.initPages();
   }

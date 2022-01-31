@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/green-audio-player.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -27,15 +29,38 @@
     </nav>
 
     <div id="pages">
+
       <section id="home">
-        <div class="home-wrapper container"></div>
+        <div class="audio-wrapper"></div>
+        <div class="home-wrapper"></div>
       </section>
+
       <section id="search">
-        <div class="search-wrapper container"></div>
+        <div class="search-wrapper">
+          <div class="heading">
+            <h1>SEARCH</h1>
+          </div>
+          <div class="search-container">
+            <p>Name</p>
+            <form>
+              <input type="text" placeholder="author / title">
+              <button type="submit">SEARCH</button>
+            </form>
+          </div>
+          <div class="audio-wrapper"></div>
+        </div>
       </section>
+
       <section id="discover">
-        <div class="discover-wrapper container"></div>
+        <div class="discover-wrapper">
+          <div class="heading">
+            <h1>DISCOVER</h1>
+            <p>Give it a try!</p>
+          </div>
+          <div class="audio-wrapper"></div>
+        </div>
       </section>
+
     </div>
 
     <footer>
@@ -43,7 +68,23 @@
     </footer>
 
 
+    <script id="template-song" type="text/x-handlebars-template">
+      <div class="song">
+        <p class="data"><span class="author">{{ author }}</span> - <span class="title">{{ title }}</span></p>
+        <div class="audio-player">
+          <audio>
+            <source src="media/songs/{{ filename }}" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="line-below-player">
+          <p class="categories">Categories: {{categories}}</p>
+          <p class="ranking">#{{ ranking }} in the ranking</p>
+        </div>
+      </div>
+    </script>
+
     <script id="template-home" type="text/x-handlebars-template">
+
       <div class="subscribe">
         <div class="subscribe-background">
           <img src="media/images/subscribe.jpg">
@@ -70,8 +111,11 @@
           <p>Available only for subscribers</p>
         </div>
       </div>
+
     </script>
 
+    <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+    <script src="vendor/green-audio-player.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="js/app.js" type="module"></script>
   </body>

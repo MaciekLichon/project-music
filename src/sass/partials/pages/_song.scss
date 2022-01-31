@@ -1,0 +1,55 @@
+.audio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .song {
+    padding-bottom: 40px;
+
+    .data {
+      font-size: 30px;
+      text-align: center;
+      letter-spacing: .1em;
+      margin-right: -.1em;
+    }
+
+    .line-below-player {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 20px;
+      color: $color-three;
+      font-weight: $font-regular;
+      letter-spacing: .1em;
+    }
+
+    .line-below-player .categories {
+      margin-left: 20px;
+    }
+
+    .line-below-player .ranking {
+      margin-right: 20px;
+    }
+  }
+}
+
+.green-audio-player {
+  width: 600px;
+
+  .slider .gap-progress {
+    background-color: $color-one;
+
+    .pin {
+      background-color: $color-one;
+    }
+  }
+
+  .volume .volume__button.open path {
+    fill: $color-one;
+  }
+
+  .volume .volume__controls {
+    background-color: $color-four;
+  }
+}

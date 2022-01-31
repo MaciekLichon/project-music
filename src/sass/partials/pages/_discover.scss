@@ -1,0 +1,20 @@
+.discover-wrapper {
+  text-align: center;
+
+  .heading {
+    padding-bottom: 30px;
+
+    h1 {
+      font-size: 60px;
+      letter-spacing: $font-spacing;
+      color: $color-three;
+      font-weight: $font-regular;
+      padding-bottom: 30px;
+    }
+
+    p {
+      font-size: 30px;
+      letter-spacing: $font-spacing;
+    }
+  }
+}
