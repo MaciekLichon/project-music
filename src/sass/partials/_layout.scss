@@ -5,15 +5,17 @@ nav {
   margin: 50px 0 100px 0;
 
   .main-nav {
-    width: 30%;
     display: flex;
     justify-content: space-between;
+    min-width: 30%;
 
     a {
       letter-spacing: $font-spacing;
       font-size: 1.8em;
       color: $color-three;
       transition: color 0.5s;
+      min-width: 200px;
+      text-align: center;
 
       &.active {
         color: $color-two;

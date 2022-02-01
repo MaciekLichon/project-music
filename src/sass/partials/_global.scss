@@ -19,3 +19,13 @@ a {
     display: block;
   }
 }
+
+#search {
+  .not-found {
+    display: none;
+  }
+
+  > * {
+    display: block;
+  }
+}

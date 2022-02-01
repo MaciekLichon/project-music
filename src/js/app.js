@@ -2,6 +2,7 @@ import {select, classNames, settings} from './settings.js';
 import Home from './components/Home.js';
 import Song from './components/Song.js';
 import Discover from './components/Discover.js';
+import Search from './components/Search.js';
 
 const app = {
   initHome: function() {
@@ -86,6 +87,7 @@ const app = {
 
         thisApp.initHomeSongs();
         thisApp.initDiscover();
+        thisApp.initSearch();
         thisApp.initAudioPlayer();
       });
   },
@@ -130,6 +132,14 @@ const app = {
     let randomSong = thisApp.data.songs[Object.keys(thisApp.data.songs)[randomIndex]];
 
     new Discover(randomSong, discoverAudioWrapper);
+  },
+
+  initSearch: function() {
+    const thisApp = this;
+
+    const searchAudioWrapper = document.querySelector(select.containerOf.searchAudio);
+
+    new Search(thisApp.data.songs, searchAudioWrapper);
   },
 
   init: function() {

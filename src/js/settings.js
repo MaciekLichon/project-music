@@ -7,11 +7,16 @@ export const select = {
     home: '.home-wrapper',
     homeAudio: '#home .audio-wrapper',
     discoverAudio: '#discover .audio-wrapper',
+    searchAudio: '#search .audio-wrapper',
     pages: '#pages',
     audioPlayer: '.song .audio-player',
   },
   nav: {
     links: '.main-nav a',
+  },
+  search: {
+    button: '.search-container button',
+    input: '.search-container input',
   }
 };
 
@@ -21,7 +26,10 @@ export const classNames = {
   },
   nav: {
     active: 'active',
-  }
+  },
+  search: {
+    notFound: 'not-found',
+  },
 };
 
 export const settings = {

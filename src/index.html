@@ -41,9 +41,9 @@
             <h1>SEARCH</h1>
           </div>
           <div class="search-container">
-            <p>Name</p>
             <form>
-              <input type="text" placeholder="author / title">
+              <p>Name</p>
+              <input type="text">
               <button type="submit">SEARCH</button>
             </form>
           </div>
@@ -69,7 +69,7 @@
 
 
     <script id="template-song" type="text/x-handlebars-template">
-      <div class="song">
+      <div class="song" id="{{filename}}">
         <p class="data"><span class="author">{{ author }}</span> - <span class="title">{{ title }}</span></p>
         <div class="audio-player">
           <audio>

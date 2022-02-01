@@ -1,6 +1,7 @@
 .splash {
   height: 100vh;
   background-image: linear-gradient(0deg, rgba(19,19,19,1) 0%, rgba(19,19,19,1) 6%, rgba(19,19,19,0.9) 25%, rgba(19,19,19,0) 70%), url('../../media/images/background.jpg');
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -8,7 +9,7 @@
   .main-title {
     position: absolute;
     top: 51%;
-    left: 49%;
+    left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;

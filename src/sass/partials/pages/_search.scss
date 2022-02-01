@@ -7,15 +7,44 @@
     h1 {
       font-size: 60px;
       letter-spacing: $font-spacing;
+      margin-right: -$font-spacing;
       color: $color-three;
       font-weight: $font-regular;
       padding-bottom: 30px;
     }
   }
 
-  .search-container {
+  form {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: $font-regular;
+    font-size: 25px;
+    letter-spacing: .1em;
+
+    p {
+      color: $color-three;
+      width: 140px;
+      text-align: right;
+    }
+
+    input {
+      height: 60px;
+      width: 650px;
+      border-radius: 10px;
+      border: none;
+      margin: 0 20px;
+      color: $color-three;
+    }
+
+    button {
+      height: 60px;
+      border: none;
+      background-color: $color-one;
+      border-radius: 10px;
+      color: $color-two;
+      width: 140px;
+      letter-spacing: .1em;
+    }
   }
 }
