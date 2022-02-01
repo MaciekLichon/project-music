@@ -8,28 +8,29 @@
     padding-bottom: 40px;
 
     .data {
-      font-size: 30px;
+      font-size: 1.875rem;
       text-align: center;
-      letter-spacing: .1em;
-      margin-right: -.1em;
+      letter-spacing: .2rem;
+      padding-left: .2rem;
     }
 
     .line-below-player {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 20px;
+      font-size: 1.25rem;
       color: $color-three;
       font-weight: $font-regular;
-      letter-spacing: .1em;
+      letter-spacing: .12rem;
+      padding-left: .12rem;
     }
 
     .line-below-player .categories {
-      margin-left: 20px;
+      margin-left: 1.25rem;
     }
 
     .line-below-player .ranking {
-      margin-right: 20px;
+      margin-right: 1.25rem;
     }
   }
 }

@@ -11,15 +11,23 @@ nav {
 
     a {
       letter-spacing: $font-spacing;
-      font-size: 1.8em;
+      font-size: 1.875rem;
       color: $color-three;
       transition: color 0.5s;
-      min-width: 200px;
+      min-width: 210px;
       text-align: center;
 
       &.active {
         color: $color-two;
       }
+    }
+
+    a:first-child {
+      text-align: left;
+    }
+
+    a:last-child {
+      text-align: right;
     }
 
     a:hover {
