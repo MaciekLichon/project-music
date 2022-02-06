@@ -42,14 +42,30 @@ const app = {
 
         const linkId = clickedElement.getAttribute('href').replace('#', '');
 
-        thisApp.openPage(linkId);
-
         window.location.hash = '#/' + linkId; // ta zmiana powoduje, ze strona po przeladowaniu nie przewija sie do elementu o id 'linkId' tylko zostaje na gorze
         // wspomniane przewijanie sie strony jest domyslnym zachowaniem strony, ktore mozna nadpisac zmianiajac link
+
+        // scroll up
+        window.scroll({
+          top: 495,
+          behavior: 'smooth'
+        });
+
+        // turn audio off
+        thisApp.turnOffAudio();
+
+        // highlight nav link
+        for (let link of thisApp.navLinks) {
+          link.classList.toggle(
+            classNames.nav.active, // klasa do dodania
+            link.getAttribute('href') == '#' + linkId // warunek
+          );
+        }
+
+        // open new page after a delay
+        setTimeout(() => {thisApp.openPage(linkId);}, 550);
       });
     }
-
-
   },
 
   openPage: function(pageId) {
@@ -60,13 +76,6 @@ const app = {
       page.classList.toggle(
         classNames.pages.active, // klasa do dodania
         page.id == pageId // warunek
-      );
-    }
-
-    for (let link of thisApp.navLinks) {
-      link.classList.toggle(
-        classNames.nav.active, // klasa do dodania
-        link.getAttribute('href') == '#' + pageId // warunek
       );
     }
 
@@ -141,6 +150,23 @@ const app = {
     const searchAudioWrapper = document.querySelector(select.containerOf.searchAudio);
 
     new Search(thisApp.data.songs, searchAudioWrapper);
+  },
+
+  turnOffAudio: function() {
+    const playButtons = document.querySelectorAll('.play-pause-btn');
+    for (let button of playButtons) {
+      button.setAttribute('aria-label', 'Play');
+    }
+
+    const playPaths = document.querySelectorAll('.play-pause-btn path');
+    for (let path of playPaths) {
+      path.setAttribute('d', 'M18 12L0 24V0');
+    }
+
+    const audios = document.querySelectorAll('audio');
+    for (let audio of audios) {
+      audio.pause();
+    }
   },
 
   init: function() {

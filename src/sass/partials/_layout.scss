@@ -13,7 +13,6 @@ nav {
       flex-direction: column;
     }
 
-
     a {
       letter-spacing: $font-spacing;
       font-size: 1.875rem;
@@ -21,7 +20,7 @@ nav {
       transition: color 0.5s;
       min-width: 210px;
       text-align: center;
-
+      
       &.active {
         color: $color-two;
       }
