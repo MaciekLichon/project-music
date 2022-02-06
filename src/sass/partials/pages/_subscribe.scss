@@ -1,210 +1,168 @@
-
-
-/* SUBSCRIBE SECTION STYLES*/
-
 .subscribe {
   height: 100vh;
   position: relative;
-  margin-top: 50px;
+
+  .subscribe-background {
+    position: absolute;
+    bottom: 0;
+    height: 95%;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 
   .subscribe-title {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    top: 0;
     margin: 0;
-    font-size: 6.25rem;
-    font-weight: $font-semibold;
-    letter-spacing: 1rem;
-    padding-left: 1rem;
+    text-align: center;
     white-space: nowrap;
+    font-size: 6.25rem;
+    letter-spacing: 1.5rem;
+    padding-left: 1.5rem;
+
+    @media (max-width: 1440px) {
+      font-size: 5.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 4.5rem;
+      letter-spacing: 1rem;
+    }
+
+    @media (max-width: 786px) {
+      font-size: 4rem;
+      letter-spacing: .3rem;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 2.5rem;
+      letter-spacing: .3rem;
+      top: 2%;
+    }
 
     span {
-      font-weight: $font-bold;
-    }
-  }
-
-  .subscribe-background {
-    position: absolute;
-    width: 100%;
-    height: 95%;
-    bottom: 0;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .subscribe-content {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .artist-image {
-      width: 30%;
-      max-height: 30%;
-      padding-left: 300px;
-
-      @media(min-width: 767px) {
-        height: 500px;
-        aspect-ratio: 1;
-        overflow: hidden;
-      }
-    }
-
-    .artist-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .artist-name {
-      position: absolute;
-      margin: 0;
-      top: 25%;
-      right: 35%;
-      z-index: 1;
-      font-size: 100px;
-      letter-spacing: $font-spacing;
       font-weight: $font-black;
     }
+  }
 
-    .artist-name .line {
+  .artist-name {
+    position: absolute;
+    font-size: 6.25rem;
+    letter-spacing: 1rem;
+    font-weight: $font-black;
+    z-index: 1;
+    top: 40%;
+    left: 41%;
+
+    @media (max-width: 1024px) {
+      top: 20%;
+      left: 18%;
+    }
+
+    @media (max-width: 786px) {
+      font-size: 5rem;
+      top: 30%;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 3rem;
+      letter-spacing: .5rem;
+      top: 30%;
+      left: 10%;
+    }
+
+    .first-line {
       display: block;
     }
 
-    .artist-name .second-line {
-      margin-left: 80px;
+    .second-line {
+      margin-left: 70px;
     }
 
-    .second-line span {
+    .coloured-part {
       color: $color-one;
     }
   }
 
+  .artist-image {
+    position: absolute;
+    height: 600px;
+    width: 450px;
+    top: 20%;
+    right: 20%;
+
+    @media (max-width: 1024px) {
+      top: 10%;
+      right: 10%;
+    }
+
+    @media (max-width: 425px) {
+      height: 350px;
+      width: 250px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
   .subscribe-offer {
-    text-align: right;
+    position: absolute;
     font-size: 2.5rem;
     letter-spacing: .5rem;
-    padding: 30px 0;
+    right: 18%;
+    top: 80%;
+
+    @media (max-width: 1024px) {
+      top: 70%;
+      right: 10%;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 1.5rem;
+    }
 
     h3, p {
       margin: 0;
-    }
-
-    h3 {
-      font-weight: $font-bold;
-      color: $color-three;
+      text-align: right;
     }
   }
 
-  a[href="subscribe-button"] {
-    margin-top: 60px;
+  a {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 310px;
-    height: 120px;
+    width: 300px;
+    height: 130px;
     background-color: $color-one;
     border-radius: 10px;
     font-size: 2.5rem;
-    letter-spacing: .5rem;
-    font-weight: $font-bold;
+    letter-spacing: 0.2rem;
+    top: 60%;
+    right: 65%;
 
+    @media (max-width: 1024px) {
+      top: 85%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: 425px) {
+      width: 250px;
+      height: 100px;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
-  // .artist {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   width: 100%;
-  //   height: 100%;
-  //
-  //
-  //   .artist-data {
-  //     position: relative;
-  //     width: 100%;
-  //     height: 100%;
-  //
-  //     display: flex;
-  //     flex-direction: column;
-  //
-  //     .artist-image {
-  //       top: 15%;
-  //       right: 18%;
-  //       width: 450px;
-  //       height: 600px;
-  //     }
-  //
-  //     .artist-image img {
-  //       width: 100%;
-  //       height: 100%;
-  //       object-fit: cover;
-  //     }
-  //
-  //     .artist-name {
-  //       margin: 0;
-  //       top: 41%;
-  //       right: 29.5%;
-  //       z-index: 1;
-  //       font-size: 100px;
-  //       letter-spacing: $font-spacing;
-  //       font-weight: $font-black;
-  //     }
-  //
-  //     .artist-name .line {
-  //       display: block;
-  //     }
-  //
-  //     .artist-name .second-line {
-  //       margin-left: 80px;
-  //     }
-  //
-  //     .second-line span {
-  //       color: $color-one;
-  //     }
-  //   }
-  // }
-  //
-  // .subscribe-offer {
-  //   position: absolute;
-  //   top: 70%;
-  //   right: 16%;
-  //   text-align: right;
-  //   font-size: 40px;
-  //   margin-top: 30px;
-  //   letter-spacing: .5rem;
-  //
-  //   h3, p {
-  //     margin: 0;
-  //   }
-  //
-  //   h3 {
-  //     font-weight: $font-bold;
-  //     color: $color-three;
-  //   }
-  // }
-  //
-  // a[href="subscribe-button"] {
-  //   position: absolute;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   width: 310px;
-  //   height: 120px;
-  //   background-color: $color-one;
-  //   border-radius: 10px;
-  //   font-size: 2.5rem;
-  //   letter-spacing: .5rem;
-  //   font-weight: $font-bold;
-  //
-  //   top: 80%;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  // }
 }

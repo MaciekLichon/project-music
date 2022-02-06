@@ -28,9 +28,21 @@
       }
 
       @media(max-width: 1024px) {
-        font-size: 10em;
-        padding-left: .5em;
-        letter-spacing: .5em;
+        font-size: 8em;
+        padding-left: .4em;
+        letter-spacing: .4em;
+      }
+
+      @media(max-width: 768px) {
+        font-size: 7em;
+        padding-left: .3em;
+        letter-spacing: .3em;
+      }
+
+      @media(max-width: 425px) {
+        font-size: 6em;
+        padding-left: .2em;
+        letter-spacing: .2em;
       }
     }
 

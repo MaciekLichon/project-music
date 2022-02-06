@@ -69,6 +69,7 @@ const app = {
         link.getAttribute('href') == '#' + pageId // warunek
       );
     }
+
   },
 
   initData: function() {
